@@ -21,7 +21,7 @@ if prompt := st.chat_input("Search for files..."):
         with st.spinner("Searching..."):
             try:
                 response = requests.post(
-                    "http://localhost:8001/chat",
+                    "https://drive-agent.mohitchdev.me/chat",
                     json={"message": prompt}
                 )
                 answer = response.json()["response"]
